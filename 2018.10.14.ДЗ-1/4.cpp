@@ -8,7 +8,7 @@ int main() {
 	cin >> arraySize;
 	int sum = 0;
 	int *array = new int[arraySize];
-	for (unsigned int i = 0; i < arraySize; i++) {
+	for (int i = 0; i < arraySize; i++) {
 		/*Input array elements until the number of elements is equal to its dimension*/
 		cin >> array[i];
 		if ((abs(array[i]) % 27 == 0) && (abs(array[i]) % 72 != 0)) {
