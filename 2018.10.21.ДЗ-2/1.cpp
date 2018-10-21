@@ -126,6 +126,7 @@ int main() {
 	rational(O) = H -= B;
 	cout << "A -= B =" << O << endl;//arifm -=
 	rational C, E(5, 7), G(-5, 7); //example rational E and G
+	cout << "Enter the numerator and denominator of the fraction" << endl;
 	cin >> C;//input rational C
 	cout << "C = " << C << endl;
 	cout << "E = " << E << endl;
