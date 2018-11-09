@@ -7,7 +7,7 @@ double sqrt(double a) //square root
 {
 	double k;
 	double c = 0.000001;
-	for (double i = 0; 0 == 0; i += c) //square selection
+	for (double i = 0; true; i += c) //square selection
 	{
 		if (((i * i) <= a) && (((i + c) * (i + c)) >= a))
 		{
@@ -35,7 +35,7 @@ double cbt(double a) //third root
 {
 	double k;
 	double c = 0.000001;
-	for (double i = 0; 0 == 0; i += c)
+	for (double i = 0; true; i += c)
 	{
 		if ((i * i * i <= a) && ((i + c) * (i + c) * (i + c) >= a)) //cube selection
 		{
