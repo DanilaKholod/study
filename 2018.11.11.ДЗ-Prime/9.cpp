@@ -19,7 +19,7 @@ int main() {
 		j += c;
 	}
 	double d = (j - i);
-	while ((f(x) != 0) || (sign(f(x - n)) == sign(f(x + n))))
+	while ((f(x) != 0) && (sign(f(x - n)) == sign(f(x + n))))
 	{
 		d /= 2;
 		if (sign(f(i)) != sign(f(x)))
