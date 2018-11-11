@@ -234,11 +234,11 @@ int main()
 	First.output();
 	cout << "\n";
 	if (First.day_of_week() == 1) { cout << "Sunday"; };
-	if (First.day_of_week() == 2) { cout << "Saturday"; };
-	if (First.day_of_week() == 3) { cout << "Friday"; };
-	if (First.day_of_week() == 4) { cout << "Thursday"; };
-	if (First.day_of_week() == 5) { cout << "Wednesday"; };
-	if (First.day_of_week() == 6) { cout << "Tuesday"; };
+	if (First.day_of_week() == 2) { cout << "Monday"; };
+	if (First.day_of_week() == 3) { cout << "Tuesday"; };
+	if (First.day_of_week() == 4) { cout << "Wednesday"; };
+	if (First.day_of_week() == 5) { cout << "Thursday"; };
+	if (First.day_of_week() == 6) { cout << "Friday"; };
 	if ((First.day_of_week() == 0) || (First.day_of_week() == 7)) { cout << "Monday"; };
 	cout << '\n';
 	cout << First.new_year() << " days left until New Year" << '\n';
