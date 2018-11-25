@@ -239,7 +239,7 @@ int main()
 	if (First.day_of_week() == 4) { cout << "Wednesday"; };
 	if (First.day_of_week() == 5) { cout << "Thursday"; };
 	if (First.day_of_week() == 6) { cout << "Friday"; };
-	if ((First.day_of_week() == 0) || (First.day_of_week() == 7)) { cout << "Monday"; };
+	if ((First.day_of_week() == 0) || (First.day_of_week() == 7)) { cout << "Saturday"; };
 	cout << '\n';
 	cout << First.new_year() << " days left until New Year" << '\n';
 	Date Second;
