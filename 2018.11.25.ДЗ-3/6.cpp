@@ -24,7 +24,7 @@ int main()  {
 			}
 		}
 	}
-	for (int i = 2; i < n; i++) {
+	for (int i = 2; i <= n; i++) {
 		if ((used[i]) && ((used[i + 2]) || (array[i + 2] == 2)))    {
 			cout << i << " ";
 		}
