@@ -8,7 +8,7 @@ int main() {
 		cin >> d[i];
 	}
 	for(int i = 0; i < N; i++) {
-		if ((d[i] % 2 == 0) && (d[i] % 3 == 0)) {
+		if ((d[i] % 2 != 0) && (d[i] % 3 == 0)) {
 			mult *= d[i];
 		}
 	}
