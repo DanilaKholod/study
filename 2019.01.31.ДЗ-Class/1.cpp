@@ -32,8 +32,8 @@ public:
 		delete[] data;
 	}
 	const double_vector& operator=(const double_vector& A)	{
-        vectorSize = A.vectorSize;
-        vectorCapacity = A.vectorCapacity;
+        size = A.size;
+        capacity = A.capacity;
         data = A.data;
         return *this;
 	}
