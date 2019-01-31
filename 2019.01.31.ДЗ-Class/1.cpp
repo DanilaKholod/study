@@ -31,15 +31,11 @@ public:
 	~double_vector() {
 		delete[] data;
 	}
-	const double_vector& operator=(const double_vector& A)	{                                 
-		if (&A == this)
-			return *this;
-		delete[] data;
-		size = A.size;
-		data = new double[size];
-		for (int i = 0; i < size; i++)
-			data[i] = A.data[i];
-		return *this;
+	const double_vector& operator=(const double_vector& A)	{
+        vectorSize = A.vectorSize;
+        vectorCapacity = A.vectorCapacity;
+        data = A.data;
+        return *this;
 	}
 	double &operator[] (int i) {
 		return data[i];
