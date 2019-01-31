@@ -21,21 +21,27 @@ public:
 		for (int i = 0; i < N; i++)
 			data[i] = A[i];
 	}
-	double_vector(const double_vector& A) {
+	double_vector(const double_vector& A) { 
+
 		size = A.size;
-		capacity = A.capacity;
-		data = A.data;
+		data = new double[size];
+		for (int i = 0; i < size; i++)
+			data[i] = A.data[i];
 	}
 	~double_vector() {
 		delete[] data;
 	}
-	const double_vector& operator=(const double_vector& A) {
+	const double_vector& operator=(const double_vector& A)	{                                 
+		if (&A == this)
+			return *this;
+		delete[] data;
 		size = A.size;
-		capacity = A.capacity;
-		data = A.data;
+		data = new double[size];
+		for (int i = 0; i < size; i++)
+			data[i] = A.data[i];
 		return *this;
 	}
-	double &operator[] (int i) {
+    double &operator[] (int i) {
 		return data[i];
 	}
 	void push_back(int x) {
