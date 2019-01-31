@@ -41,17 +41,17 @@ public:
 			data[i] = A.data[i];
 		return *this;
 	}
-    double &operator[] (int i) {
+	double &operator[] (int i) {
 		return data[i];
 	}
 	void push_back(int x) {
 		if (size >= capacity) {
 			capacity *= 2;
-			double* T = new double[capacity];
+			double* temp = new double[capacity];
 			for (int i = 0; i < size; i++)
-				T[i] = data[i];
+				temp[i] = data[i];
 			delete[] data;
-			data = T;
+			data = temp;
 		}
 		data[size] = x;
 		size++;
