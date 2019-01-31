@@ -148,12 +148,12 @@ int main() {
 	int N, k, x, a, b;
 	cin >> N;
 	double_vector B(N);
-	for (int i; i < N; i++)
+	for (int i = 0; i < N; i++)
 		cout << B[i] << ' ';
 	cout << '\n';
 	cin >> N;
 	double* T = new double(N);
-	for (int i; i < N; i++)
+	for (int i = 0; i < N; i++)
 		cin >> T[i];
 	double_vector C(T, N);
 	cin >> x;
