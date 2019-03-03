@@ -21,19 +21,21 @@ public:
 		for (int i = 0; i < N; i++)
 			data[i] = A[i];
 	}
-	double_vector(const double_vector& A) {
+	double_vector(const double_vector& A) { 
+
 		size = A.size;
-		capacity = A.capacity;
-		data = A.data;
+		data = new double[size];
+		for (int i = 0; i < size; i++)
+			data[i] = A.data[i];
 	}
 	~double_vector() {
 		delete[] data;
 	}
-	const double_vector& operator=(const double_vector& A) {
-		size = A.size;
-		capacity = A.capacity;
-		data = A.data;
-		return *this;
+	const double_vector& operator=(const double_vector& A)	{
+        size = A.size;
+        capacity = A.capacity;
+        data = A.data;
+        return *this;
 	}
 	double &operator[] (int i) {
 		return data[i];
@@ -41,11 +43,11 @@ public:
 	void push_back(int x) {
 		if (size >= capacity) {
 			capacity *= 2;
-			double* T = new double[capacity];
+			double* temp = new double[capacity];
 			for (int i = 0; i < size; i++)
-				T[i] = data[i];
+				temp[i] = data[i];
 			delete[] data;
-			data = T;
+			data = temp;
 		}
 		data[size] = x;
 		size++;
@@ -142,12 +144,12 @@ int main() {
 	int N, k, x, a, b;
 	cin >> N;
 	double_vector B(N);
-	for (int i; i < N; i++)
+	for (int i = 0; i < N; i++)
 		cout << B[i] << ' ';
 	cout << '\n';
 	cin >> N;
 	double* T = new double(N);
-	for (int i; i < N; i++)
+	for (int i = 0; i < N; i++)
 		cin >> T[i];
 	double_vector C(T, N);
 	cin >> x;
