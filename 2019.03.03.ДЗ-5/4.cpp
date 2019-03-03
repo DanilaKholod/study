@@ -37,15 +37,15 @@ public:
 	}
 	void push_index(int x, int j) {
 		int i = 0;
-		Node* tmp = new Node;
+		Node* temp = new Node;
 		tmp->data = x;
 		Node* temp = head;
 		while (i != j) {
 			temp = temp->next;
 			i++;
 		}
-		tmp->next = temp->next;
-		temp->next = tmp;
+		temp->next = temp->next;
+		temp->next = temp;
 	}
 	void del(int j) {
 		int i = 0;
@@ -54,7 +54,7 @@ public:
 			temp = temp->next;
 			i++;
 		}
-		Node* tmp = temp->next;
+		Node* temp = temp->next;
 		temp->next = temp->next->next;
 		delete tmp;
 	}
