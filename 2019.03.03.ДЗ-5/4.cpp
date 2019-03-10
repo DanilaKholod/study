@@ -38,7 +38,7 @@ public:
 	void push_index(int x, int j) {
 		int i = 0;
 		Node* temp = new Node;
-		tmp->data = x;
+		temp->data = x;
 		Node* temp = head;
 		while (i != j) {
 			temp = temp->next;
